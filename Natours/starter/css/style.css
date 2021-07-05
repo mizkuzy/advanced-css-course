@@ -41,6 +41,10 @@ body {
     height: 35px;
 }
 
+.logo-box:hover .logo {
+    animation: moveInTop 0.5s ease-in;
+}
+
 .text-box {
     position: absolute;
     top: 40%;
@@ -59,6 +63,8 @@ body {
     font-size: 60px;
     font-weight: 400;
     letter-spacing: 35px;
+
+    animation: moveInLeft 2s ease-out;
 }
 
 .heading-primary-sub {
@@ -67,4 +73,47 @@ body {
     font-size: 20px;
     font-weight: 700;
     letter-spacing: 17.4px;
+
+    animation: moveInRight 2s ease-out;
+}
+
+@keyframes moveInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    80% {
+        transform: translateX(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+}
+
+@keyframes moveInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    80% {
+        transform: translateX(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+}
+
+@keyframes moveInTop {
+    0% {
+        opacity: 0;
+        transform: translateY(-15px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
