@@ -1,0 +1,27 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  /* it's better to use percentage of browser default font-size because
+       1. If a user changes browser default font size then all REMs will be recalculated.
+          If font-size is in pixels then REMs will not be recalculated depend on browser font size
+       2. It's easier to count REMs depend on 10px
+  */
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.7;
+  color: $color-grey-dark;
+  box-sizing: border-box;
+
+  padding: 3rem;
+}
